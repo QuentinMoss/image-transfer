@@ -12,4 +12,6 @@ Run the script:  `python2 transfer_image.py`
 
 If you just want to move an image from one account to another in the same region, there are [faster ways](http://docs.rackspace.com/images/api/v2/ci-devguide/content/image-sharing.html) to do this.
 
+It will take many hours for this process to finish.  If you're running this script on a remove server over SSH, be sure to start it in `tmux` or `screen`.
+
 The performance of this script could likely be improved by splitting the transfer of the partial image files from one Cloud Files region to the other in to multiple threads.
