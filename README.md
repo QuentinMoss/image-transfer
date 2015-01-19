@@ -1,1 +1,15 @@
-# image-transfer
+Image Transfer
+--------------
+Transfer a glance image from one Rackspace region to another, optionally transferring the image to a different account.
+
+# Usage
+
+Set the constants `SOURCE_USERNAME`, `SOURCE_API_KEY`, `SOURCE_REGION`, `DESTINATION_REGION`, `IMAGE_ID`, and `IMAGE_NAME` to appropriate values.  To optionally move the image to another account in the process, also set the `DESTINATION_USERNAME` and `DESTINATION_API_KEY` appropriately.
+
+Run the script:  `python2 transfer_image.py`
+
+# Notes
+
+If you just want to move an image from one account to another in the same region, there are [faster ways](http://docs.rackspace.com/images/api/v2/ci-devguide/content/image-sharing.html) to do this.
+
+The performance of this script could likely be improved by splitting the transfer of the partial image files from one Cloud Files region to the other in to multiple threads.
