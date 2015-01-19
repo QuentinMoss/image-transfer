@@ -67,7 +67,7 @@ img_to = to_ctx.get_client('images', DESTINATION_REGION)
 #################
 ## Do the work ##
 #################
-"""
+
 # Start the task to export the image to Cloud Files
 export_task = img_from.export_task(IMAGE_ID, from_container)
 
@@ -110,7 +110,7 @@ http_headers = {'X-Auth-Token': to_ctx.auth_token,
                 'Content-Length': 0}
 url = cf_endpoint + '/' + IMAGE_ID + '/' + IMAGE_ID + '.vhd'
 r = requests.put(url, headers=http_headers)
-"""
+
 # Import the image from Cloud Files
 import_task = img_to.import_task(IMAGE_ID + '.vhd', IMAGE_ID,
                                  img_name=IMAGE_NAME)
